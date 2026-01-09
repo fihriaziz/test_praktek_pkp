@@ -16,3 +16,15 @@ Array
 
 )
 ```
+
+File Faktorial HTML, akan menampilkan result dari faktorial yang di input.
+
+File logout PHP Akan Menghasilkan Output seperti berikut
+
+```php
+Array
+(
+    [0] => budi
+    [1] => citra
+)
+```
