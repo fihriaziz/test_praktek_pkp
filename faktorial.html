@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktorial</title>
+</head>
+<body>
+    <input type="text" id="numberInput">
+    <button type="button" id="btnHitung">Hitung Faktorial</button>
+    <p id="hasil"></p>
+</body>
+<script>
+    function faktorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        return n * faktorial(n - 1);
+    }
+
+    document.getElementById("btnHitung").addEventListener("click", function() {
+        const input = document.getElementById("numberInput");
+        const hasil = document.getElementById("hasil");
+        const number = parseInt(input.value);
+
+        if (isNaN(number)) {
+            hasil.textContent = "Masukkan angka yang valid.";
+            return;
+        }
+
+        if (number < 0) {
+            hasil.textContent = "Masukkan angka positif.";
+            return;
+        }
+
+        hasil.textContent = `Faktorial dari ${number} adalah ${faktorial(number)}.`;
+    });
+</script>
+</html>
